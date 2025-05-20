@@ -436,7 +436,6 @@ export default function AdminPage() {
       
       <Container fluid className="px-4 py-5">
         <div className="d-flex justify-content-between align-items-center mb-4">
-          <h2>Gestión de Productos</h2>
           <Button 
             variant="success" 
             onClick={() => {
@@ -585,6 +584,12 @@ export default function AdminPage() {
           color: #212529;
         }
       `}</style>
+      <footer>
+        <Container>
+          <p className="mb-0">&copy; {new Date().getFullYear()} PcLaptop. Todos los derechos reservados.</p>
+          <p className="mb-0">Desarrollado por Fabio Fabrega da Silva.</p>
+        </Container>
+      </footer>
     </div>
   );
 }

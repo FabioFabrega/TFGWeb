@@ -2,9 +2,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button, Modal, Form, InputGroup } from 'react-bootstrap';
 import { FaEuroSign, FaSearch, FaTrash, FaPlus, FaMinus } from "react-icons/fa";
-import { IoPersonCircle } from "react-icons/io5";
 import NavbarComponent from "@/componentes/Navbar";
-import Carrusel from "@/componentes/Carrusel";
 import Loading from "@/componentes/Loading";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link";
@@ -700,16 +698,9 @@ export default function UsuarioPage() {
       />
       
       <Container fluid className="px-4 py-5">
-        {/* Carrusel de productos destacados */}
-        <section className="mb-5">
-          <Carrusel featuredProductIds={[21, 22, 23, 24]} />
-        </section>
-
         {/* Sección de productos */}
         <section>
           <div className="d-flex justify-content-between align-items-center mb-4">
-            <h2>Todos los Productos</h2>
-            
             {searchResults !== null && (
               <div className="d-flex align-items-center">
                 <span className="me-3">
@@ -833,7 +824,12 @@ export default function UsuarioPage() {
         .detalle-btn {
           font-size: 0.9rem;
         }
-      `}</style>
+      `}</style><footer>
+        <Container>
+          <p className="mb-0">&copy; {new Date().getFullYear()} PcLaptop. Todos los derechos reservados.</p>
+          <p className="mb-0">Desarrollado por Fabio Fabrega da Silva.</p>
+        </Container>
+      </footer>
     </div>
   );
 }

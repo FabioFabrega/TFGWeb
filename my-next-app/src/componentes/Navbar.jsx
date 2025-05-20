@@ -31,20 +31,21 @@ export default function NavbarComponent({ userType = 'guest', onSearch, cartItem
   const renderAuthLinks = () => {
     if (userType === 'guest') {
       return (
-        <h3>
+        <div><div><h3>
           <Link href="/login" className="text-white me-3 text-decoration-none">
             <IoPersonCircle className="me-1" />Login
-          </Link>
+          </Link></h3></div>
+          <div><h3>
           <Link href="/regis" className="text-white text-decoration-none">
-            <IoPersonCircle className="me-1" />Registrar
+            <IoPersonCircle className="me-1" />Registrer
           </Link>
-        </h3>
+        </h3></div></div>
       );
     } else {
       return (
-        <Link href="/" className="text-white text-decoration-none">
+        <h3><Link href="/" className="text-white text-decoration-none">
           <IoPersonCircle className="me-1" />Cerrar sesión
-        </Link>
+        </Link></h3>
       );
     }
   };
@@ -70,11 +71,11 @@ export default function NavbarComponent({ userType = 'guest', onSearch, cartItem
   };
 
   return (
-    <header className="bg-dark text-white">
+    <header>
       <Container>
         <div className="head py-3">
           <Link href={userType === 'guest' ? '/' : userType === 'admin' ? '/cesta/admin' : '/cesta/usuario'} className="inicio">
-            <h1>TechStore</h1>
+             <h1>Pc<img src="/logo.png" className='logo'/>Laptop</h1>
           </Link>
           
           <Form onSubmit={handleSearch} className="d-flex">

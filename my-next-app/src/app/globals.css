@@ -1,5 +1,5 @@
 header {
-  background-color: #ff7b00;
+  background-color: orange;
   padding: 30px;
 }
 
@@ -124,7 +124,6 @@ main {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para cada item de la cesta */
 #cesta-menu .dropdown-item {
   display: flex;
   justify-content: space-between;
@@ -155,18 +154,10 @@ main {
   background-color: #c0392b;
 }
 
-
 .inicio {
   text-decoration: none;
   color: white;
 }
-
-.hr_global {
-  border: 0;
-  height: 3px;
-  background-color: white;
-}
-
 
 .body_regis {
   margin: 0;
@@ -189,14 +180,6 @@ main {
   padding: 20px;
   width: 400px;
   background-color: white;
-}
-
-
-hr {
-  border: 0;
-  height: 2px;
-  background-color: #000000;
-  margin: 10px 0;
 }
 
 input {
@@ -518,4 +501,18 @@ button:hover {
 
 .btn-cancelar:hover {
   background-color: #ccc;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+}
+footer {
+  background-color: rgba(221, 144, 0, 0.973);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
 }

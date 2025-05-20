@@ -64,8 +64,6 @@ export default function Home() {
         {/* Sección de productos */}
         <section>
           <div className="d-flex justify-content-between align-items-center mb-4">
-            <h2>Todos los Productos</h2>
-            
             {searchResults !== null && (
               <div className="d-flex align-items-center">
                 <span className="me-3">
@@ -119,6 +117,12 @@ export default function Home() {
           )}
         </section>
       </Container>
+      <footer>
+        <Container>
+          <p className="mb-0">&copy; {new Date().getFullYear()} PcLaptop. Todos los derechos reservados.</p>
+          <p className="mb-0">Desarrollado por Fabio Fabrega da Silva.</p>
+        </Container>
+      </footer>
     </div>
   );
 }
