@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComponent from "@/componentes/Navbar";
-import Carrusel from "@/componentes/Carrusel";
 import ProductCard from "@/componentes/ProductCard";
 import Loading from "@/componentes/Loading";
 import "./globals.css";
@@ -13,9 +12,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [searchResults, setSearchResults] = useState(null);
-  
-  // IDs de productos destacados para el carrusel (pueden ser modificados fácilmente)
-  const featuredProductIds = [21, 22, 23, 24]; 
 
   useEffect(() => {
     const fetchProductos = async () => {
@@ -65,11 +61,6 @@ export default function Home() {
       <NavbarComponent onSearch={handleSearch} onClearSearch={clearSearch} />
       
       <Container fluid className="px-4 py-5">
-        {/* Carrusel de productos destacados */}
-        <section className="mb-5">
-          <Carrusel featuredProductIds={featuredProductIds} />
-        </section>
-
         {/* Sección de productos */}
         <section>
           <div className="d-flex justify-content-between align-items-center mb-4">
