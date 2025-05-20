@@ -1,0 +1,105 @@
+'use client'
+import Link from "next/link";
+import { FaEuroSign } from "react-icons/fa";
+import { IoPersonCircle } from "react-icons/io5";
+import { Dropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Carrusel from "./carrusel/page";
+import { useEffect, useState } from "react";
+import "./globals.css";
+
+async function getProductos() {
+  try {
+    const res = await fetch("http://143.47.56.237:3000/productos");
+    if (!res.ok) {
+      throw new Error("Failed to fetch productos");
+    }
+    return res.json();
+  } catch (error) {
+    console.error("Error al obtener productos:", error);
+    return null;
+  }
+}
+
+const Navbar = () => (
+  <header>
+    <div className="head">
+      <Link href="/" className="inicio"><h1>TechStore</h1></Link>
+      <input type="text" id="texto" name="texto" placeholder="Busca aquí..." aria-label="Buscar productos" />
+      <h3>
+        <Link href="./login"><IoPersonCircle />Login</Link><p></p>
+        <Link href="./regis"><IoPersonCircle />Registrar</Link>
+      </h3>
+    </div>
+    <hr className="hr_global" />
+    <nav>
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Categoría
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="./categoria/ordenadores"><button>Ordenadores</button></Dropdown.Item>
+          <Dropdown.Item href="./categoria/moviles"><button>Móviles</button></Dropdown.Item>
+          <Dropdown.Item href="./categoria/componentes"><button>Componentes</button></Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+
+      <Dropdown>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+          Nuestro equipo
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+          <Dropdown.Item href="./about/Fabio"><button>Fabio</button></Dropdown.Item>
+          <Dropdown.Item href="./about/Deyvid"><button>Deyvid</button></Dropdown.Item>
+          <Dropdown.Item href="./about/Kevin"><button>Kevin</button></Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown>
+    </nav>
+  </header>
+);
+
+const Producto = ({ producto }) => (
+  <div className="div_producto">
+    <img className="producto-imagen" src={producto?.imagen || "/file.svg"} alt={producto?.nombre || "Imagen del producto"} />
+    <h2 className="producto-nombre">{producto?.nombre}</h2>
+    <p className="producto-descripcion">{producto?.descripcion}</p>
+    <p className="producto-precio">{producto?.precio} <FaEuroSign /></p>
+    <Link href={`/detalle/${producto.id_producto}`}>
+      <button>Ver detalles</button>
+    </Link>
+  </div>
+);
+export default function Home() {
+  const [productos, setProductos] = useState(null);
+
+  useEffect(() => {
+    const fetchProductos = async () => {
+      const productosData = await getProductos();
+      setProductos(productosData);
+    };
+
+    fetchProductos();
+  }, []); 
+
+  return (
+    <div className="global">
+    <Navbar/>
+    <main>
+      <section>
+        <div className="divC">
+          <Carrusel />
+        </div>
+        <div className="products-container">
+          {productos ? (
+            productos.map((producto) => (
+              <Producto key={producto.id_producto} producto={producto} />
+            ))
+          ) : (
+            <p>Cargando productos...</p>
+          )}
+        </div>
+      </section>
+    </main>
+  </div>
+  );
+}

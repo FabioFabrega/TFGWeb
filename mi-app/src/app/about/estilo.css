@@ -1,0 +1,55 @@
+.body_about {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(61, 61, 61);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    text-decoration: none;
+    background-color: white;
+    margin-top: 100px;
+}
+
+.autor {
+    margin: 0 70px;
+}
+
+.card {
+    border: 3px solid black;
+    padding: 20px;
+    width: 500px;
+}
+
+.hr_autor {
+    border: 0;
+    height: 2px;
+    background-color: #000000;
+    margin: 10px 0;
+}
+
+.bot_autor {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bot_autor a {
+    text-decoration: none;
+}
+
+.img_autor {
+    width: 120px;
+    height: auto;
+    margin-left: 170px;
+    display: flex;
+    flex: row nowrap;
+    justify-content: center;
+    align-items: center;
+}

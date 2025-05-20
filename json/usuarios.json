@@ -1,0 +1,282 @@
+[
+  {
+    "nombre": "Juan",
+    "apellido": "Pérez",
+    "email": "juan.perez@gmail.com",
+    "password": "Juan123",
+    "direccion": "Calle Principal 123, Madrid",
+    "telefono": "+34612345678",
+    "rol": "usuario",
+    "carrito": {
+      "id_carrito": 1,
+      "fecha_creacion": "2023-11-12T10:30:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "María",
+    "apellido": "González",
+    "email": "maria.gonzalez@hotmail.com",
+    "password": "María123",
+    "direccion": "Avenida Libertad 45, Barcelona",
+    "telefono": "+34623456789",
+    "rol": "administrador",
+    "carrito": {
+      "id_carrito": 2,
+      "fecha_creacion": "2023-11-11T09:25:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Carlos",
+    "apellido": "Rodríguez",
+    "email": "carlos.rodriguez@gmail.com",
+    "password": "Carlos123",
+    "direccion": "Plaza Mayor 7, Valencia",
+    "telefono": "+34634567890",
+    "rol": "vendedor",
+    "carrito": {
+      "id_carrito": 3,
+      "fecha_creacion": "2023-11-10T14:15:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Ana",
+    "apellido": "Martínez",
+    "email": "ana.martinez@hotmail.com",
+    "password": "Ana123",
+    "direccion": "Calle Serrano 89, Sevilla",
+    "telefono": "+34645678901",
+    "rol": "usuario",
+    "carrito": {
+      "id_carrito": 4,
+      "fecha_creacion": "2023-11-09T16:40:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Pedro",
+    "apellido": "Sánchez",
+    "email": "pedro.sanchez@gmail.com",
+    "password": "Pedro123",
+    "direccion": "Avenida Diagonal 234, Bilbao",
+    "telefono": "+34656789012",
+    "rol": "soporte",
+    "carrito": {
+      "id_carrito": 5,
+      "fecha_creacion": "2023-11-08T11:50:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Laura",
+    "apellido": "López",
+    "email": "laura.lopez@hotmail.com",
+    "password": "Laura123",
+    "direccion": "Calle Gran Vía 56, Málaga",
+    "telefono": "+34667890123",
+    "rol": "usuario",
+    "carrito": {
+      "id_carrito": 6,
+      "fecha_creacion": "2023-11-07T08:20:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Miguel",
+    "apellido": "Fernández",
+    "email": "miguel.fernandez@gmail.com",
+    "password": "Miguel123",
+    "direccion": "Plaza España 12, Zaragoza",
+    "telefono": "+34678901234",
+    "rol": "administrador",
+    "carrito": {
+      "id_carrito": 7,
+      "fecha_creacion": "2023-11-06T13:10:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Sofía",
+    "apellido": "Díaz",
+    "email": "sofia.diaz@hotmail.com",
+    "password": "Sofía123",
+    "direccion": "Calle de la Paz 78, Granada",
+    "telefono": "+34689012345",
+    "rol": "vendedor",
+    "carrito": {
+      "id_carrito": 8,
+      "fecha_creacion": "2023-11-05T10:00:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Javier",
+    "apellido": "García",
+    "email": "javier.garcia@gmail.com",
+    "password": "Javier123",
+    "direccion": "Avenida de la Constitución 90, Toledo",
+    "telefono": "+34690123456",
+    "rol": "usuario",
+    "carrito": {
+      "id_carrito": 9,
+      "fecha_creacion": "2023-11-04T15:30:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Clara",
+    "apellido": "Hernández",
+    "email": "clara.hernandez@hotmail.com",
+    "password": "Clara123",
+    "direccion": "Calle de la Libertad 34, Murcia",
+    "telefono": "+34601234567",
+    "rol": "soporte",
+    "carrito": {
+      "id_carrito": 10,
+      "fecha_creacion": "2023-11-03T12:45:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Diego",
+    "apellido": "Morales",
+    "email": "diego.morales@gmail.com",
+    "password": "Diego123",
+    "direccion": "Calle del Sol 22, Alicante",
+    "telefono": "+34612345678",
+    "rol": "administrador",
+    "carrito": {
+      "id_carrito": 11,
+      "fecha_creacion": "2023-11-02T09:15:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Valeria",
+    "apellido": "Torres",
+    "email": "valeria.torres@hotmail.com",
+    "password": "Valeria123",
+    "direccion": "Avenida del Mar 11, Almería",
+    "telefono": "+34623456789",
+    "rol": "vendedor",
+    "carrito": {
+      "id_carrito": 12,
+      "fecha_creacion": "2023-11-01T14:30:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Fernando",
+    "apellido": "Jiménez",
+    "email": "fernando.jimenez@gmail.com",
+    "password": "Fernando123",
+    "direccion": "Calle de la Esperanza 99, León",
+    "telefono": "+34634567890",
+    "rol": "usuario",
+    "carrito": {
+      "id_carrito": 13,
+      "fecha_creacion": "2023-10-31T11:00:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Gabriela",
+    "apellido": "Ríos",
+    "email": "gabriela.rios@hotmail.com",
+    "password": "Gabriela123",
+    "direccion": "Plaza de la Libertad 88, Oviedo",
+    "telefono": "+34645678901",
+    "rol": "soporte",
+    "carrito": {
+      "id_carrito": 14,
+      "fecha_creacion": "2023-10-30T16:20:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Hugo",
+    "apellido": "Cruz",
+    "email": "hugo.cruz@gmail.com",
+    "password": "Hugo123",
+    "direccion": "Calle de la Paz 55, San Sebastián",
+    "telefono": "+34656789012",
+    "rol": "administrador",
+    "carrito": {
+      "id_carrito": 15,
+      "fecha_creacion": "2023-10-29T13:40:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Isabel",
+    "apellido": "Salazar",
+    "email": "isabel.salazar@hotmail.com",
+    "password": "Isabel123",
+    "direccion": "Avenida de la Ciencia 77, Santiago",
+    "telefono": "+34667890123",
+    "rol": "vendedor",
+ "carrito": {
+      "id_carrito": 16,
+      "fecha_creacion": "2023-10-28T10:05:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Ricardo",
+    "apellido": "Mendoza",
+    "email": "ricardo.mendoza@gmail.com",
+    "password": "Ricardo123",
+    "direccion": "Calle de la Innovación 44, Córdoba",
+    "telefono": "+34678901234",
+    "rol": "usuario",
+    "carrito": {
+      "id_carrito": 17,
+      "fecha_creacion": "2023-10-27T15:15:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Patricia",
+    "apellido": "Vega",
+    "email": "patricia.vega@hotmail.com",
+    "password": "Patricia123",
+    "direccion": "Avenida de la Cultura 33, Salamanca",
+    "telefono": "+34689012345",
+    "rol": "soporte",
+    "carrito": {
+      "id_carrito": 18,
+      "fecha_creacion": "2023-10-26T12:30:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Esteban",
+    "apellido": "Ponce",
+    "email": "esteban.ponce@gmail.com",
+    "password": "Esteban123",
+    "direccion": "Calle de la Libertad 22, Badajoz",
+    "telefono": "+34690123456",
+    "rol": "administrador",
+    "carrito": {
+      "id_carrito": 19,
+      "fecha_creacion": "2023-10-25T09:45:00Z"
+    },
+    "pedidos": []
+  },
+  {
+    "nombre": "Nadia",
+    "apellido": "Cordero",
+    "email": "nadia.cordero@hotmail.com",
+    "password": "Nadia123",
+    "direccion": "Plaza de la Paz 11, Huelva",
+    "telefono": "+34601234567",
+    "rol": "vendedor",
+    "carrito": {
+      "id_carrito": 20,
+      "fecha_creacion": "2023-10-24T08:00:00Z"
+    },
+    "pedidos": []
+  }
+] 

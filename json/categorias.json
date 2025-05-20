@@ -1,0 +1,34 @@
+[
+    {
+      "nombre": "Portátiles",
+      "descripcion": "Dispositivos portátiles ideales para gaming y productividad."
+    },
+    {
+      "nombre": "Monitores",
+      "descripcion": "Pantallas de alta calidad para gaming, trabajo y entretenimiento."
+    },
+    {
+      "nombre": "Periféricos",
+      "descripcion": "Accesorios y dispositivos complementarios para mejorar la experiencia de uso."
+    },
+    {
+      "nombre": "Componentes",
+      "descripcion": "Partes internas y hardware para ensamblar o mejorar computadoras."
+    },
+    {
+      "nombre": "Almacenamiento",
+      "descripcion": "Dispositivos para almacenar datos, incluyendo SSDs y discos duros."
+    },
+    {
+      "nombre": "Fuentes de Alimentación",
+      "descripcion": "Fuentes de energía para alimentar componentes de computadoras."
+    },
+    {
+      "nombre": "Mobiliario",
+      "descripcion": "Muebles y sillas ergonómicas diseñadas para gamers y profesionales."
+    },
+    {
+      "nombre": "Redes",
+      "descripcion": "Dispositivos para establecer y mejorar conexiones de red."
+    }
+  ]

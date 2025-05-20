@@ -1,0 +1,542 @@
+[
+  {
+    "nombre": "Portátil Gaming ASUS ROG Strix G15",
+    "descripcion": "Potente portátil gaming con procesador AMD Ryzen 7 5800H, 16GB RAM, 1TB SSD, tarjeta gráfica NVIDIA GeForce RTX 3070, pantalla de 15.6 pulgadas Full HD a 300Hz, ideal para gamers exigentes.",
+    "precio": 1499.99,
+    "stock": 25,
+    "categoria": {
+      "id_categoria": 1,
+      "nombre": "Portátiles"
+    },
+    "imagen": "https://www.discoazul.com/uploads/media/images/portatil-gaming-asus-rog-strix-g15-g512lv-hn090t-i7-16gb-1tb-ssd-rtx2060-1.jpg",
+    "marca": "ASUS",
+    "modelo": "ROG Strix G15",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Monitor LG UltraGear 27",
+    "descripcion": "Monitor gaming de 27 pulgadas con resolución QHD (2560x1440), tiempo de respuesta de 1ms, frecuencia de refresco de 165Hz, HDR10 y compatible con NVIDIA G-Sync para una experiencia gaming sin tearing.",
+    "precio": 349.95,
+    "stock": 50,
+    "categoria": {
+      "id_categoria": 2,
+      "nombre": "Monitores"
+    },
+    "imagen": "https://www.lg.com/content/dam/channel/wcms/es/images/monitores/27gs60f-b_aeu_eees_es_c/gallery/DZ-03.jpg",
+    "marca": "LG",
+    "modelo": "UltraGear 27GN800-B",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Teclado mecánico Corsair K70 RGB",
+    "descripcion": "Teclado mecánico premium con switches Cherry MX Red, retroiluminación RGB personalizable por tecla, reposamuñecas desmontable, estructura de aluminio y teclas específicas para multimedia.",
+    "precio": 149.99,
+    "stock": 100,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://comprasgeek.com/wp-content/uploads/2024/03/Teclado-Mecanico-para-Juego-Corsair-K70-RGB-Low-Profile-RAPIDFIRE-CHERRY-MX-LP-Speed-2.jpg",
+    "marca": "Corsair",
+    "modelo": "K70 RGB MK.2",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Procesador AMD Ryzen 9 5900X",
+    "descripcion": "Procesador de alto rendimiento con 12 núcleos y 24 hilos, frecuencia base de 3.7GHz y turbo hasta 4.8GHz, 64MB de caché L3, TDP de 105W, compatible con socket AM4 y PCIe 4.0.",
+    "precio": 539.99,
+    "stock": 30,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://www.alternate.es/p/1200x630/0/9/AMD_Ryzen_9_5900X_procesador_3_7_GHz_64_MB_L3@@1685590.jpg",
+    "marca": "AMD",
+    "modelo": "Ryzen 9 5900X",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Tarjeta gráfica NVIDIA GeForce RTX 3080",
+    "descripcion": "Potente GPU con 10GB GDDR6X, núcleos CUDA, ray tracing y DLSS 2.0 para gaming 4K y creación de contenido. Refrigeración eficiente con tres ventiladores.",
+    "precio": 799.99,
+    "stock": 15,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://img.pccomponentes.com/articles/51/514403/1873-gigabyte-geforce-rtx-3080-gaming-oc-v2-10gb-gddr6x.jpg",
+    "marca": "NVIDIA",
+    "modelo": "GeForce RTX 3080",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Disco SSD Samsung 970  Evo Plus 1TB",
+    "descripcion": "Disco SSD NVMe M.2 de 1TB con velocidades de lectura de hasta 3500 MB/s y escritura de hasta 3300 MB/s, ideal para mejorar el rendimiento de tu sistema.",
+    "precio": 129.99,
+    "stock": 40,
+    "categoria": {
+      "id_categoria": 5,
+      "nombre": "Almacenamiento"
+    },
+    "imagen": "https://www.discoazul.com/uploads/media/images/disco-duro-samsung-970-evo-plus-nvme-ssd-m2-1tb-12.jpg",
+    "marca": "Samsung",
+    "modelo": "970 EVO Plus",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Auriculares Razer Kraken X",
+    "descripcion": "Auriculares gaming ligeros con sonido envolvente 7.1, micrófono flexible y almohadillas de gel para mayor comodidad durante largas sesiones de juego.",
+    "precio": 79.99,
+    "stock": 60,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://www.neobyte.es/25099-large_default/auricular-razer-gaming-kraken-x-usb.jpg",
+    "marca": "Razer",
+    "modelo": "Kraken X",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Placa base ASUS ROG Strix B550-F",
+    "descripcion": "Placa base ATX con chipset B550, soporte para procesadores AMD Ryzen de tercera generación, PCIe 4.0, y conectividad Wi-Fi 6.",
+    "precio": 199.99,
+    "stock": 20,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/81hyD9axkrL.jpg",
+    "marca": "ASUS",
+    "modelo": "ROG Strix B550-F",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Fuente de alimentación Corsair RM750x",
+    "descripcion": "Fuente de alimentación modular de 750W, certificación 80 PLUS Gold, ventilador silencioso de 135mm y cables planos para una mejor gestión del cableado.",
+    "precio": 129.99,
+    "stock": 35,
+    "categoria": {
+      "id_categoria": 6,
+      "nombre": "Fuentes de Alimentación"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/71vXweqjv+L._AC_UF894,1000_QL80_.jpg",
+    "marca": "Corsair",
+    "modelo": "RM750x",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Webcam Logitech C920 HD",
+    "descripcion": "Webcam Full HD 1080p con enfoque automático, micrófono estéreo y corrección de luz, ideal para videoconferencias y streaming.",
+    "precio": 89.99,
+    "stock": 45,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/71iNwni9TsL.jpg",
+    "marca": "Logitech",
+    "modelo": "C920 HD",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Silla Gaming DXRacer Formula Series",
+    "descripcion": "Silla ergonómica para gamers con soporte lumbar, reposabrazos ajustables y tapizado en cuero sintético, diseñada para largas horas de juego.",
+    "precio": 299.99,
+    "stock": 10,
+    "categoria": {
+      "id_categoria": 7,
+      "nombre": "Mobiliario"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/61xFI60fP7L.jpg",
+    "marca": "DXRacer",
+    "modelo": "Formula Series",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Router TP-Link Archer AX50",
+    "descripcion": "Router Wi-Fi 6 con velocidades de hasta 3000 Mbps, cuatro puertos LAN, y tecnología MU-MIMO para múltiples dispositivos conectados.",
+    "precio": 129.99,
+    "stock": 25,
+    "categoria": {
+      "id_categoria": 8,
+      "nombre": "Redes"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/51DaIDueSNL._AC_UF1000,1000_QL80_.jpg",
+    "marca": "TP-Link",
+    "modelo": "Archer AX50",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Portátil Dell XPS 13",
+    "descripcion": "Portátil ultradelgado con pantalla InfinityEdge de 13.3 pulgadas, procesador Intel Core i7, 16GB RAM y 512GB SSD, ideal para profesionales en movimiento.",
+    "precio": 1399.99,
+    "stock": 20,
+    "categoria": {
+      "id_categoria": 1,
+      "nombre": "Portátiles"
+    },
+    "imagen": "https://amso.eu/hpeciai/05ce9769bda1b53362bb164a3cc1400c/spa_pl_Nuevo-portatil-Dell-XPS-13-PLUS-9320-i5-1240P-8GB-512GB-1920x1080-Windows-11-Professional-244133_4.jpg",
+    "marca": "Dell",
+    "modelo": "XPS 13",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Monitor BenQ GW2480",
+    "descripcion": "Monitor de 24 pulgadas con resolución Full HD, tecnología IPS, y diseño sin marco, ideal para trabajo y entretenimiento.",
+    "precio": 199.99,
+    "stock": 30,
+    "categoria": {
+      "id_categoria": 2,
+      "nombre": "Monitores"
+    },
+    "imagen": "https://media.lifeinformatica.com/cdn-cgi/image/sharpen=0.5,f=auto/contents/Life/BENQ-9H.LGDLA.TBE/imgs/9H.LGDLA.TBE-02.jpg",
+    "marca": "BenQ",
+    "modelo": "GW2480",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Teclado Logitech G Pro",
+    "descripcion": "Teclado mecánico compacto diseñado para esports, con switches mecánicos Romer-G, retroiluminación RGB y diseño portátil.",
+    "precio": 129.99,
+    "stock": 80,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://i.ytimg.com/vi/PRts6byhfuU/maxresdefault.jpg",
+    "marca": "Logitech",
+    "modelo": "G Pro",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Procesador Intel Core i9-11900K",
+    "descripcion": "Procesador de alto rendimiento con 8 núcleos y 16 hilos, frecuencia base de 3.5GHz y turbo hasta 5.3GHz, ideal para gaming y creación de contenido.",
+    "precio": 599.99,
+    "stock": 25,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/716Xv6uRpRL._AC_UF894,1000_QL80_.jpg",
+    "marca": "Intel",
+    "modelo": "Core i9-11900K",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Tarjeta gráfica AMD Radeon RX 6800",
+    "descripcion": "GPU de alto rendimiento con 16GB GDDR6, soporte para ray tracing y tecnología Smart Access Memory para un rendimiento óptimo en juegos.",
+    "precio": 649.99,
+    "stock": 10,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://storage.googleapis.com/catalog-pictures-carrefour-es/catalog/pictures/hd_510x_/4719331307981_1.jpg",
+    "marca": "AMD",
+    "modelo": "Radeon RX 6800",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Disco duro externo Seagate 2TB",
+    "descripcion": "Disco duro externo portátil de 2TB, USB 3.0, ideal para almacenamiento de archivos y copias de seguridad.",
+    "precio": 89.99,
+    "stock": 50,
+    "categoria": {
+      "id_categoria": 5,
+      "nombre": "Almacenamiento"
+    },
+    "imagen": "https://www.chipcom.es/productos/imagenes/img_13077_4002d448ced9acc5f1d018e735081786_20.jpg",
+    "marca": "Seagate",
+    "modelo": "Expansion Portable",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Auriculares HyperX Cloud II",
+    "descripcion": "Auriculares gaming con sonido envolvente 7.1, micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad.",
+    "precio": 99.99,
+    "stock": 40,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://cdn.awsli.com.br/600x450/1919/1919257/produto/171125366/3542bf64ba.jpg",
+    "marca": "HyperX",
+    "modelo": "Cloud II",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Placa base MSI B450 TOMAHAWK MAX",
+    "descripcion": "Placa base ATX con chipset B450, soporte para procesadores AMD Ryzen, y múltiples opciones de conectividad.",
+    "precio": 109.99,
+    "stock": 15,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/61HBOyjed-L.jpg",
+    "marca": "MSI",
+    "modelo": "B450 TOMAHAWK MAX",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Fuente de alimentación EVGA 600 W1",
+    "descripcion": "Fuente de alimentación de 600W, certificación 80 PLUS White, diseño compacto y ventilador de 120mm para un funcionamiento silencioso.",
+    "precio": 69.99,
+    "stock": 30,
+    "categoria": {
+      "id_categoria": 6,
+      "nombre": "Fuentes de Alimentación"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/71C4NqjW9pL.jpg",
+    "marca": "EVGA",
+    "modelo": "600 W1",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Webcam Razer Kiyo",
+    "descripcion": "Webcam con anillo de luz ajustable, resolución 720p y 1080p, ideal para streaming y videoconferencias.",
+    "precio": 99.99,
+    "stock": 25,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/61NefsHS95L._AC_UF894,1000_QL80_.jpg",
+    "marca": "Razer",
+    "modelo": "Kiyo",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Silla Gaming Secretlab Omega",
+    "descripcion": "Silla ergonómica premium con soporte lumbar, reposabrazos ajustables y tapizado en cuero sintético, diseñada para largas horas de juego.",
+    "precio": 399.99,
+    "stock": 5,
+    "categoria": {
+      "id_categoria": 7,
+      "nombre": "Mobiliario"
+    },
+    "imagen": "https://images.secretlab.co/turntable/tr:n-w_450/OM20-PU-Horde_02.jpg",
+    "marca": "Secretlab",
+    "modelo": "Omega",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Router ASUS RT-AX88U",
+    "descripcion": "Router Wi-Fi 6 de alto rendimiento con cuatro puertos LAN, tecnología MU-MIMO y soporte para AiMesh.",
+    "precio": 299.99,
+    "stock": 15,
+    "categoria": {
+      "id_categoria": 8,
+      "nombre": "Redes"
+    },
+    "imagen": "https://www.asusbymacman.es/37685-large_default/asus-rt-be88u-router.jpg",
+    "marca": "ASUS",
+    "modelo": "RT-AX88U",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Portátil HP Spectre x360",
+    "descripcion": "Portátil convertible con pantalla táctil de 13.3 pulgadas, procesador Intel Core i7, 16GB RAM y 512GB SSD, ideal para productividad y entretenimiento.",
+    "precio": 1599.99,
+    "stock": 10,
+    "categoria": {
+      "id_categoria": 1,
+      "nombre": "Portátiles"
+    },
+    "imagen": "https://i.blogs.es/6b9d9c/hp-spectre-x360-1/1366_2000.jpg",
+    "marca": "HP",
+    "modelo": "Spectre x360",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Monitor AOC 24G2",
+    "descripcion": "Monitor gaming de 24 pulgadas con resolución Full HD, tiempo de respuesta de 1ms y frecuencia de refresco de 144Hz, ideal para juegos competitivos.",
+    "precio": 249.99,
+    "stock": 20,
+    "categoria": {
+      "id_categoria": 2,
+      "nombre": "Monitores"
+    },
+    "imagen": "https://storage.aoc.com/assets/8450/AOC_G2_24_FV_ADJUSTABLE_STAND_FRONT-large.png",
+    "marca": "AOC",
+    "modelo": "24G2",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Teclado Razer Huntsman Elite",
+    "descripcion": "Teclado mecánico con switches ópticos, retroiluminación RGB y reposamuñecas ergonómico, ideal para gamers.",
+    "precio": 199.99,
+    "stock": 50,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://www.coolmod.com/images/product/large/razer-huntsman-elite-gaming-teclado-002.jpg",
+    "marca": "Razer",
+    "modelo": "Huntsman Elite",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Procesador AMD Ryzen 5 5600X",
+    "descripcion": "Procesador de 6 núcleos y 12 hilos, frecuencia base de 3.7GHz y turbo hasta 4.6GHz, ideal para gaming y tareas multitarea.",
+    "precio": 299.99,
+    "stock": 40,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://cdnx.jumpseller.com/tienda-gamer-medellin/image/13007272/AMD-Ryzen-5-5600X-Review11-1280x720.jpg",
+    "marca": "AMD",
+    "modelo": "Ryzen 5 5600X",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Tarjeta gráfica MSI GeForce GTX 1660 Super",
+    "descripcion": "GPU de gama media con 6GB GDDR6, ideal para juegos en 1080p y creación de contenido.",
+    "precio": 249.99,
+    "stock": 30,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/71M4pG5B6zS.jpg",
+    "marca": "MSI",
+    "modelo": "GeForce GTX 1660 Super",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Disco SSD Crucial MX500 1TB",
+    "descripcion": "Disco SSD SATA de 1TB con velocidades de lectura de hasta 560 MB/s y escritura de hasta 510 MB/s, ideal para mejorar el rendimiento de tu PC.",
+    "precio": 109.99,
+    "stock": 50,
+    "categoria": {
+      "id_categoria": 5,
+      "nombre": "Almacenamiento"
+    },
+    "imagen": "https://plazavea.vteximg.com.br/arquivos/ids/9499040-512-512/imageUrl_4.jpg",
+    "marca": "Crucial",
+    "modelo": "MX500",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Auriculares Logitech G533",
+    "descripcion": "Auriculares inalámbricos con sonido envolvente DTS Headphone:X, micrófono plegable y batería de larga duración.",
+    "precio": 149.99,
+    "stock": 30,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://cdn.idealo.com/folder/Product/5333/6/5333677/s11_produktbild_max_4/logitech-g533.jpg",
+    "marca": "Logitech",
+    "modelo": "G533",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Placa base Gigabyte B550 AORUS ELITE",
+    "descripcion": "Placa base ATX con chipset B550, soporte para procesadores AMD Ryzen de tercera generación, y conectividad PCIe 4.0.",
+    "precio": 159.99,
+    "stock": 20,
+    "categoria": {
+      "id_categoria": 4,
+      "nombre": "Componentes"
+    },
+    "imagen": "https://img.pccomponentes.com/articles/30/300749/1475-gigabyte-b550m-aorus-elite.jpg",
+    "marca": "Gigabyte",
+    "modelo": "B550 AORUS ELITE",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Fuente de alimentación Thermaltake Smart 600W",
+    "descripcion": "Fuente de alimentación de 600W, certificación 80 PLUS, diseño compacto y ventilador de 120mm para un funcionamiento silencioso.",
+    "precio": 59.99,
+    "stock": 25,
+    "categoria": {
+      "id_categoria": 6,
+      "nombre": "Fuentes de Alimentación"
+    },
+    "imagen": "https://m.media-amazon.com/images/I/71YFikKVmjL._AC_UF894,1000_QL80_.jpg",
+    "marca": "Thermaltake",
+    "modelo": "Smart 600W",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Webcam Microsoft LifeCam HD-3000",
+    "descripcion": "Webcam con resolución HD 720p, micrófono integrado y tecnología TrueColor para videoconferencias.",
+    "precio": 49.99,
+    "stock": 40,
+    "categoria": {
+      "id_categoria": 3,
+      "nombre": "Periféricos"
+    },
+    "imagen": "https://img.pccomponentes.com/articles/6/60406/microsoft-lifecam-hd-3000-1.jpg",
+    "marca": "Microsoft",
+    "modelo": "LifeCam HD-3000",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Silla Gaming Noblechairs Hero",
+    "descripcion": "Silla ergonómica de alta calidad con soporte lumbar, reposabrazos ajustables y tapizado en cuero sintético, ideal para largas sesiones de juego.",
+    "precio": 349.99,
+    "stock": 8,
+    "categoria": {
+      "id_categoria": 7,
+      "nombre": "Mobiliario"
+    },
+    "imagen": "https://www.coolmod.com/images/product/large/PROD-018274_1.jpg",
+    "marca": "Noblechairs",
+    "modelo": "Hero",
+    "carritos": [],
+    "detallesPedido": []
+  },
+  {
+    "nombre": "Router Netgear Nighthawk AX12",
+    "descripcion": "Router Wi-Fi 6 de alto rendimiento con 12 flujos, ideal para streaming 4K y juegos en línea.",
+    "precio": 499.99,
+    "stock": 10,
+    "categoria": {
+      "id_categoria": 8,
+      "nombre": "Redes"
+    },
+    "imagen": "https://media.ldlc.com/r1600/ld/products/00/05/92/78/LD0005927851_1.jpg",
+    "marca": "Netgear",
+    "modelo": "Nighthawk AX12",
+    "carritos": [],
+    "detallesPedido": []
+  }
+]

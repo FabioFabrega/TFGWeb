@@ -1,0 +1,77 @@
+'use client'
+import { useState } from 'react';
+
+export default function Home() {
+  const [carrito, setCarrito] = useState([]);
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+  
+  // Lista de productos
+  const productos = [
+    { id: 1, nombre: 'Producto 1', precio: 10, imagen: '/producto1.jpg' },
+    { id: 2, nombre: 'Producto 2', precio: 20, imagen: '/producto2.jpg' },
+    // Más productos...
+  ];
+
+  // Función para agregar un producto al carrito
+  const agregarAlCarrito = (producto) => {
+    setCarrito([...carrito, producto]);
+
+    // Enviar al backend (NestJS)
+    fetch('/api/carrito', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(producto),
+    });
+
+    // Mostrar el dropdown
+    setDropdownVisible(true);
+  };
+
+  // Función para cerrar el dropdown
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+  return (
+    <div>
+      <h1>Tienda en Línea</h1>
+
+      <div className="productos">
+        {productos.map((producto) => (
+          <div key={producto.id} className="producto">
+            <img src={producto.imagen} alt={producto.nombre} />
+            <p>{producto.nombre}</p>
+            <p>${producto.precio}</p>
+            <button onClick={() => agregarAlCarrito(producto)}>
+              Agregar al carrito
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div>
+        <h2>Mi carrito</h2>
+        <button onClick={toggleDropdown}>
+          {carrito.length === 0 ? 'Carrito vacío' : `Ver ${carrito.length} producto(s)`}
+        </button>
+
+        {dropdownVisible && (
+          <div className="dropdown">
+            <ul>
+              {carrito.map((producto, index) => (
+                <li key={index}>
+                  {producto.nombre} - ${producto.precio}
+                </li>
+              ))}
+            </ul>
+            {carrito.length > 0 && (
+              <button onClick={() => setCarrito([])}>Vaciar carrito</button>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
