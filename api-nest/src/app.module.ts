@@ -9,6 +9,7 @@ import { CarritoModule } from './modulos/carrito/carrito.module';
 import { PedidoModule } from './modulos/pedidos/pedidos.module';
 import { PagoModule } from './modulos/pago/pago.module';
 import { ProductoModule } from './modulos/productos/productos.module';
+import { CategoriaModule } from './modulos/categoria/categoria.module';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { ProductoModule } from './modulos/productos/productos.module';
     PedidoModule,
     PagoModule,
     ProductoModule,
+    CategoriaModule,
 
 
   ],

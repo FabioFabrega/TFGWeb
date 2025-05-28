@@ -9,7 +9,7 @@ import { ProductoModule } from '../productos/productos.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Carrito, CarritoProducto],'base1'), // Importar Carrito y CarritoProducto
+    TypeOrmModule.forFeature([Carrito, CarritoProducto]), // Importar Carrito y CarritoProducto
     CarritoProductoModule, // Importar CarritoProductoModule
     ProductoModule,
   ],

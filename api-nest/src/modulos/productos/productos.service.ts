@@ -4,19 +4,28 @@ import { Repository } from 'typeorm';
 import { Producto } from './entities/productos.entity';
 import { CreateProductoDto } from './dto/create-producto.dto';
 import { UpdateProductoDto } from './dto/update-producto.dto';
+import { CategoriaService } from '../categoria/categoria.service';
 
 @Injectable()
 export class ProductoService {
   constructor(
     @InjectRepository(Producto)
     private productoRepository: Repository<Producto>,
+    private categoriaService: CategoriaService,
   ) {}
 
   async create(createProductoDto: CreateProductoDto, userRol: string): Promise<Producto> {
     if (userRol !== 'admin') {
       throw new UnauthorizedException('Solo los administradores pueden crear productos');
     }
+
+    const categoria = await this.categoriaService.findOne(createProductoDto.id_categoria);
+    if (!categoria) {
+      throw new NotFoundException(`Categoría con ID ${createProductoDto.id_categoria} no encontrada`);
+    }
+
     const producto = this.productoRepository.create(createProductoDto);
+    producto.categoria = categoria;
     return this.productoRepository.save(producto);
   }
 
@@ -42,6 +51,14 @@ export class ProductoService {
     }
 
     const producto = await this.findOne(id);
+
+    if (updateProductoDto.id_categoria) {
+      const categoria = await this.categoriaService.findOne(updateProductoDto.id_categoria);
+      if (!categoria) {
+        throw new NotFoundException(`Categoría con ID ${updateProductoDto.id_categoria} no encontrada`);
+      }
+      producto.categoria = categoria;
+    }
 
     this.productoRepository.merge(producto, updateProductoDto);
     return this.productoRepository.save(producto);

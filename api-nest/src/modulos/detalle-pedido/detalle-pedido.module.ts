@@ -5,7 +5,7 @@ import { DetallePedidoController } from './detalle-pedido.controller';
 import { DetallePedidoService } from './detalle-pedido.service';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([DetallePedido],'base1')],
+  imports: [TypeOrmModule.forFeature([DetallePedido])],
   controllers: [DetallePedidoController],
   providers: [DetallePedidoService],
   exports: [DetallePedidoService],
