@@ -8,7 +8,7 @@ import { CarritoModule } from '../carrito/carrito.module'; // Importa CarritoMod
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([Usuario]),
+    TypeOrmModule.forFeature([Usuario],'base1'),
     CarritoModule, // Agrega CarritoModule aquí
   ],
   controllers: [UsuarioController],

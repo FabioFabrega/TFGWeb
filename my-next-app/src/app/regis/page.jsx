@@ -45,7 +45,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://143.47.56.237:3000/usuarios/registro', {
+      const response = await fetch('http://localhost:4000/usuarios/registro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

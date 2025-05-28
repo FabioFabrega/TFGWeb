@@ -1,6 +1,5 @@
 // src/modulos/productos/entities/productos.entity.ts
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from 'typeorm';
-import { Categoria } from '../../categoria/entities/categoria.entity';
 import { DetallePedido } from '../../detalle-pedido/entities/detalle-pedido.entity';
 import { CarritoProducto } from 'src/modulos/carrito-producto/entities/carrito-producto.entity';
 
@@ -23,9 +22,6 @@ export class Producto {
 
     @Column({ nullable: true })
     imagen: string;
-
-    @ManyToOne(() => Categoria, categoria => categoria.productos)
-    categoria: Categoria;
 
     @OneToMany(() => CarritoProducto, (carritoProducto) => carritoProducto.producto)
     carritoProductos: CarritoProducto[];

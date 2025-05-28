@@ -10,29 +10,19 @@ import { PedidoModule } from './modulos/pedidos/pedidos.module';
 import { PagoModule } from './modulos/pago/pago.module';
 import { ProductoModule } from './modulos/productos/productos.module';
 
-
 @Module({
-  imports: [ConfigModule.forRoot({isGlobal:true,}), 
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
     TypeOrmModule.forRoot({
-      name:'base1',
       type:'mysql',
       host:process.env.URL,
       port:3306,
       username:process.env.USUARIO,
       password:process.env.PASSWORD,
       database: process.env.DBNAME,
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize:true
-    }),
-    TypeOrmModule.forRoot({
-      name:'base2',
-      type:'mysql',
-      host:process.env.URL,
-      port:3306,
-      username:process.env.USUARIO,
-      password:process.env.PASSWORD,
-      database: process.env.DBNAME2,
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
+      autoLoadEntities: true,
       synchronize:true
     }),
     AuthModule,

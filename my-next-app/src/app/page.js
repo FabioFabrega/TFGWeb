@@ -16,7 +16,7 @@ export default function Home() {
   useEffect(() => {
     const fetchProductos = async () => {
       try {
-        const res = await fetch("http://143.47.56.237:3000/productos");
+        const res = await fetch("http://localhost:4000/productos");
         if (!res.ok) {
           throw new Error("Error al obtener productos");
         }
