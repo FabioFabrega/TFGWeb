@@ -1,17 +1,16 @@
 'use client';
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button, Modal, Form, InputGroup } from 'react-bootstrap';
-import { FaEuroSign, FaSearch, FaTrash, FaPlus, FaMinus } from "react-icons/fa";
+import { FaEuroSign, FaTrash, FaPlus, FaMinus } from "react-icons/fa";
 import NavbarComponent from "@/componentes/Navbar";
 import Loading from "@/componentes/Loading";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Link from "next/link";
 import "../../globals.css";
 
 // Función para obtener productos
 async function getProductos() {
   try {
-    const res = await fetch("http://143.47.56.237:3000/productos");
+    const res = await fetch("http://localhost:4000/productos");
     if (!res.ok) {
       throw new Error("Failed to fetch productos");
     }
@@ -25,7 +24,7 @@ async function getProductos() {
 // Función para eliminar producto del carrito
 async function eliminarProductoDeCarrito(idCarrito, idProducto) {
   try {
-    const res = await fetch(`http://143.47.56.237:3000/carritos/${idCarrito}/productos/${idProducto}`, {
+    const res = await fetch(`http://localhost:4000/carritos/${idCarrito}/productos/${idProducto}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +40,7 @@ async function eliminarProductoDeCarrito(idCarrito, idProducto) {
 // Función para añadir producto al carrito
 async function añadirProductoACarrito(idCarrito, idProducto, cantidad) {
   try {
-    const res = await fetch(`http://143.47.56.237:3000/carritos/${idCarrito}/productos/${idProducto}`, {
+    const res = await fetch(`http://localhost:4000/carritos/${idCarrito}/productos/${idProducto}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -214,7 +213,7 @@ const CarritoModal = ({ show, onHide, carrito, eliminarDeCarrito, actualizarCant
       const total = calcularTotal();
       
       // Crear el pedido con el total calculado
-      const pedidoResponse = await fetch(`http://143.47.56.237:3000/pedidos/${usuarioAutenticado.id_usuario}/carritos/${idCarrito}`, {
+      const pedidoResponse = await fetch(`http://localhost:4000/pedidos/${usuarioAutenticado.id_usuario}/carritos/${idCarrito}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -230,7 +229,7 @@ const CarritoModal = ({ show, onHide, carrito, eliminarDeCarrito, actualizarCant
       }
       
       // Limpiar el carrito en la API
-      await fetch(`http://143.47.56.237:3000/carritos/${idCarrito}/productos`, {
+      await fetch(`http://localhost:4000/carritos/${idCarrito}/productos`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -481,7 +480,7 @@ export default function UsuarioPage() {
         setLoading(true);
         
         // Obtener todos los usuarios para simular autenticación
-        const usuariosResponse = await fetch('http://143.47.56.237:3000/usuarios');
+        const usuariosResponse = await fetch('http://localhost:4000/usuarios');
         if (!usuariosResponse.ok) {
           throw new Error('Error al obtener usuarios');
         }
@@ -500,7 +499,7 @@ export default function UsuarioPage() {
               console.log("Usuario sin carrito, intentando crear uno nuevo...");
               try {
                 // Si el usuario no tiene un carrito, crear uno nuevo
-                const nuevoCarritoResponse = await fetch(`http://143.47.56.237:3000/carritos`, {
+                const nuevoCarritoResponse = await fetch(`http://localhost:4000/carritos`, {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',
@@ -534,7 +533,7 @@ export default function UsuarioPage() {
               setIdCarrito(usuario.carrito.id_carrito);
             
               // Obtener los productos del carrito
-              const carritoResponse = await fetch(`http://143.47.56.237:3000/carritos/${usuario.carrito.id_carrito}`);
+              const carritoResponse = await fetch(`http://localhost:4000/carritos/${usuario.carrito.id_carrito}`);
               if (carritoResponse.ok) {
                 const carritoData = await carritoResponse.json();
                 

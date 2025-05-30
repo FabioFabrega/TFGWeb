@@ -14,19 +14,19 @@ export class ProductoController {
   @Post()
   @UseGuards(JwtAuthGuard, RolesGuard)
     create(@Body() createProductoDto: CreateProductoDto, @Req() req: Request) {
-    const userRole = (req as any).user.rol; // Accede al rol correctamente
+    const userRole = (req as any).user.rol;
    return this.productoService.create(createProductoDto, userRole);
   } 
 
 
-  @Get() // Define la ruta para obtener todos los productos (GET /productos)
+  @Get()
   findAll() {
-    return this.productoService.findAll(); // Llama al método findAll del servicio
+    return this.productoService.findAll();
   }
 
-  @Get(':id') // Define la ruta para obtener un producto por su ID (GET /productos/:id)
-  findOne(@Param('id') id: string) { // Obtiene el ID del producto de los parámetros de la ruta
-    return this.productoService.findOne(+id); // Llama al método findOne del servicio
+  @Get(':id') //
+  findOne(@Param('id') id: string) { 
+    return this.productoService.findOne(+id); 
   }
 
   @Put(':id')

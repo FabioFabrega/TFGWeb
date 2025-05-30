@@ -10,7 +10,7 @@ import axios from 'axios';
 // Función para obtener productos
 async function getProductos() {
   try {
-    const res = await fetch("http://143.47.56.237:3000/productos");
+    const res = await fetch("http://localhost:4000/productos");
     if (!res.ok) {
       throw new Error("Failed to fetch productos");
     }
@@ -24,7 +24,7 @@ async function getProductos() {
 // Función para obtener categorías
 async function getCategorias() {
   try {
-    const res = await fetch("http://143.47.56.237:3000/categorias");
+    const res = await fetch("http://localhost:4000/categorias");
     if (!res.ok) {
       throw new Error("Failed to fetch categorias");
     }
@@ -32,50 +32,6 @@ async function getCategorias() {
   } catch (error) {
     console.error("Error al obtener categorías:", error);
     return [];
-  }
-}
-
-// Función para crear un producto
-async function createProducto(productoData, token) {
-  try {
-    const res = await axios.post("http://143.47.56.237:3000/productos", productoData, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return res.data;
-  } catch (error) {
-    console.error("Error al crear producto:", error);
-    throw error;
-  }
-}
-
-// Función para eliminar un producto
-async function deleteProducto(id, token) {
-  try {
-    await axios.delete(`http://143.47.56.237:3000/productos/${id}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-  } catch (error) {
-    console.error("Error al eliminar producto:", error);
-    throw error;
-  }
-}
-
-// Función para actualizar un producto
-async function updateProducto(id, productoData, token) {
-  try {
-    const res = await axios.put(`http://143.47.56.237:3000/productos/${id}`, productoData, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
-    return res.data;
-  } catch (error) {
-    console.error("Error al actualizar producto:", error);
-    throw error;
   }
 }
 
@@ -127,7 +83,6 @@ const Producto = ({ producto, onEliminar, onEditar }) => (
   </Card>
 );
 
-// Componente de formulario para añadir/editar producto
 const ProductoForm = ({ producto, categorias, onSubmit, onCancel, title }) => {
   const [formData, setFormData] = useState({
     nombre: producto?.nombre || '',
@@ -357,56 +312,85 @@ export default function AdminPage() {
     fetchData();
   }, []);
 
-  const handleCrearProducto = (formData) => {
-    // En una aplicación real, aquí se llamaría a la API
-    // const token = localStorage.getItem('token');
-    // const nuevoProducto = await createProducto(formData, token);
-    
-    // Simulación de creación
-    const nuevoProducto = {
-      id_producto: Date.now(), // Simulamos un ID único
-      ...formData,
-      categoria: categorias.find(c => c.id_categoria == formData.id_categoria)?.nombre
-    };
-    
-    setProductos([nuevoProducto, ...productos]);
+  const handleCrearProducto = async (formData) => {
+  const token = localStorage.getItem('token');
+
+  try {
+    const response = await axios.post(
+      "http://localhost:4000/productos", 
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    );
+
+    const productosActualizados = await getProductos();
+    setProductos(productosActualizados);
+
     setShowModal(false);
     alert("Producto creado con éxito");
-  };
+  } catch (error) {
+    console.error("Error al crear producto:", error);
+    alert("Error al crear el producto.");
+  }
+};
 
-  const handleEditarProducto = (formData) => {
-    // En una aplicación real, aquí se llamaría a la API
-    // const token = localStorage.getItem('token');
-    // await updateProducto(productoSeleccionado.id_producto, formData, token);
-    
-    // Simulación de actualización
-    const productosActualizados = productos.map(producto => 
-      producto.id_producto === productoSeleccionado.id_producto 
-        ? { 
-            ...producto, 
-            ...formData,
-            categoria: categorias.find(c => c.id_categoria == formData.id_categoria)?.nombre
-          } 
-        : producto
+
+const handleEditarProducto = async (formData) => {
+  const token = localStorage.getItem('token');
+
+  try {
+    await axios.put(
+      `http://localhost:4000/productos/${productoSeleccionado.id_producto}`, 
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
     );
-    
+
+    const productosActualizados = await getProductos();
     setProductos(productosActualizados);
+
     setShowModal(false);
     setProductoSeleccionado(null);
     alert("Producto actualizado con éxito");
-  };
+  } catch (error) {
+    console.error("Error al actualizar producto:", error);
+    alert("Error al actualizar el producto.");
+  }
+};
 
-  const handleEliminarProducto = (id) => {
-    if (window.confirm("¿Está seguro de que desea eliminar este producto?")) {
-      // En una aplicación real, aquí se llamaría a la API
-      // const token = localStorage.getItem('token');
-      // await deleteProducto(id, token);
-      
-      // Simulación de eliminación
-      setProductos(productos.filter(producto => producto.id_producto !== id));
-      alert("Producto eliminado con éxito");
-    }
-  };
+
+const handleEliminarProducto = async (id) => {
+  if (!window.confirm("¿Está seguro de que desea eliminar este producto?")) return;
+
+  const token = localStorage.getItem('token');
+
+  try {
+    await axios.delete(
+      `http://localhost:4000/productos/${id}`, 
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    );
+
+    const productosActualizados = await getProductos();
+    setProductos(productosActualizados);
+
+    alert("Producto eliminado con éxito");
+  } catch (error) {
+    console.error("Error al eliminar producto:", error);
+    alert("Error al eliminar el producto.");
+  }
+};
+
+
 
   const handleSearch = (term) => {
     setSearchTerm(term);

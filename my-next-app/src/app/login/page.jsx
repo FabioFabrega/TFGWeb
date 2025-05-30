@@ -19,7 +19,7 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://143.47.56.237:3000/auth/login', {
+      const response = await axios.post('http://localhost:4000/auth/login', {
         email,
         password,
       });
