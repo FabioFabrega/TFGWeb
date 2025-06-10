@@ -67,7 +67,26 @@
     background-color: #0069d9;
     border-color: #0062cc;
 }
+.buscador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.buscar{
+  margin-top: -30px;
+  margin-left: -40px;
+  border-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.limpiar{
+  margin-top: -30px;
+  background-color: red;
+  color: white;
+  border-color: white;
+}
 /* Responsive adjustments */
 @media (max-width: 576px) {
     .auth-form-container {

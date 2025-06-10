@@ -5,6 +5,7 @@ import { IoPersonCircle } from 'react-icons/io5';
 import { FaSearch } from 'react-icons/fa';
 import { Button, Container, Form, InputGroup } from 'react-bootstrap'; // Importa Button aquí
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../app/globals.css";
 
 // Componente Navbar reutilizable que se adapta según el tipo de usuario
 export default function NavbarComponent({ userType = 'guest', onSearch, cartItemCount = 0, onCartClick, onProductSelect }) {
