@@ -516,3 +516,24 @@ footer {
   width: 100%;
   z-index: 1000;
 }
+
+.buscador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscar{
+  margin-top: -30px;
+  margin-left: -40px;
+  border-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.limpiar{
+  margin-top: -30px;
+  background-color: red;
+  color: white;
+  border-color: white;
+}

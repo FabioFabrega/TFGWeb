@@ -5,7 +5,6 @@ import { IoPersonCircle } from 'react-icons/io5';
 import { FaSearch } from 'react-icons/fa';
 import { Button, Container, Form, InputGroup } from 'react-bootstrap'; // Importa Button aquí
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Loading from './Loading';
 
 // Componente Navbar reutilizable que se adapta según el tipo de usuario
 export default function NavbarComponent({ userType = 'guest', onSearch, cartItemCount = 0, onCartClick, onProductSelect }) {
@@ -80,6 +79,7 @@ export default function NavbarComponent({ userType = 'guest', onSearch, cartItem
           
           <Form onSubmit={handleSearch} className="d-flex">
             <InputGroup>
+            <div className='buscador'>
               <Form.Control
                 type="text"
                 placeholder="Busca aquí..."
@@ -87,15 +87,15 @@ export default function NavbarComponent({ userType = 'guest', onSearch, cartItem
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" className='buscar'>
                 <FaSearch />
               </Button>
               {searchTerm && (
-                <Button variant="outline-secondary" onClick={handleClearSearch}>
+                <Button variant="outline-secondary" onClick={handleClearSearch} className='limpiar'>
                   X
                 </Button>
               )}
-            </InputGroup>
+            </div></InputGroup>
           </Form>
           
           <div className="d-flex align-items-center">
