@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokeapi-kube
+  namespace: default
+spec:
+  replicas: 1 # Número de réplicas
+  selector:
+    matchLabels:
+      app: pokeapi-kube
+  template:
+    metadata:
+      labels:
+        app: pokeapi-kube
+    spec:
+      containers:
+        - name: pokeapi-kube
+          image: deyvid14/pokeapi:v2
+          env:
+            - name: USUARIO
+              value: "fabio"
+            - name: PROYECTO
+              value: "Api"
+            - name: GITHUB
+              value: "https://github.com/FabioFabrega/Api.git"

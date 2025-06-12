@@ -1,0 +1,56 @@
+pipeline {
+    agent any
+
+    environment {
+        K8S_SERVER = "https://192.168.49.2:8443" // IP de tu VPS
+        K8S_TOKEN = credentials('k8s-token')
+        NAMESPACE="default"
+        DOCKER_IMAGE = "fabiofabrega/api"
+        DOCKER_TAG = "latest"
+        DOCKER_CREDENTIALS_ID = "docker-hub"
+        REPO="https://github.com/FabioFabrega/Api.git"
+    }
+
+    stages {
+        stage('Clonar repositorio git api desde Github') {
+            steps {
+                git branch: 'main', url: 'https://github.com/FabioFabrega/Api.git'
+            }
+        } 
+
+        stage('Docker Build & Push') { 
+             steps {
+                withCredentials([usernamePassword(
+                    credentialsId: "${DOCKER_CREDENTIALS_ID}",
+                    usernameVariable: 'DOCKER_USER',
+                    passwordVariable: 'DOCKER_PASS'
+                )]) {
+                    script {
+                        sh """
+                            docker ps
+                            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                            docker build -t $DOCKER_IMAGE:$DOCKER_TAG -f ./deploy/Dockerfile
+                            docker push $DOCKER_IMAGE:$DOCKER_TAG
+                            docker logout
+                        """
+                    }
+                }   
+            }
+        } 
+
+        stage('Acciones'){
+            steps{
+                script{
+                    sh """
+                        echo $K8S_SERVER
+                        echo $K8S_TOKEN
+                    """
+                }
+            }
+        }       
+    }
+
+    
+    
+}
+// prueba con main

@@ -1,0 +1,85 @@
+pipeline {
+    agent any
+    environment {
+        K8S_SERVER = "https://192.168.49.2:8443"
+        K8S_TOKEN = credentials('k8s-token')
+        NAMESPACE="default"
+        DOCKER_IMAGE = "fabiofabrega/api"
+        DOCKER_TAG = "latest"
+        DOCKER_CREDENTIALS_ID = "docker-hub"
+        REPO="https://github.com/FabioFabrega/Api.git"
+    }
+
+
+
+    stages {
+        stage('Clonar repositorio git Pokeapi desde Github') {
+            steps {
+                git branch: 'main', url: 'https://github.com/FabioFabrega/Api.git'
+            }
+        }  
+        /*
+        //En JENKISN no tengo DOCKER, hay que instalarlo y conectarlo al docker del VPS
+        //similar a lo que hicimos en el kubectl en JENKINS y conectarlo la KUBERNETES del VPS
+        stage('Docker Build & Push') { 
+         steps {
+            withCredentials([usernamePassword(
+                credentialsId: "${DOCKER_CREDENTIALS_ID}",
+                usernameVariable: 'DOCKER_USER',
+                passwordVariable: 'DOCKER_PASS'
+            )]) {
+                script {
+                    sh """
+                        docker ps
+                        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                        docker compose --env-file /deploy/.env -f /deploy/docker-compose.yml --build
+                        docker push $DOCKER_IMAGE:$DOCKER_TAG
+                        docker logout
+                    """
+                    }
+                }   
+            }
+        } 
+        */
+        stage('Configurar acceso a Kubernetes') {
+            steps { //conexion jenkins a kubernetes
+                script {
+                    sh """
+                    kubectl config set-cluster k8s-cluster --server=$K8S_SERVER --insecure-skip-tls-verify=true
+                    kubectl config set-credentials jenkins --token=$K8S_TOKEN
+                    kubectl config set-context jenkins --cluster=k8s-cluster --user=jenkins --namespace=$NAMESPACE
+                    kubectl config use-context jenkins
+                    """
+                }
+            }
+        }
+
+       
+            stage('Verificar kubectl 1') {
+                steps {
+                    sh 'kubectl version --client'
+                    // sh 'kubectl config current-context' // Verifica que está usando el contexto correcto
+                    sh 'kubectl get nodes' // Confirma conexión con el clúster
+                }
+            }
+        
+
+        stage('Deploy en Kubernetes') {
+            steps {
+                script {
+                    //sh "kubectl apply -f deploy/kubernetes/namespace.yaml"
+                    //sh "kubectl apply -f deploy/kubernetes/configMap.yaml"
+                    //sh "kubectl apply -f deploy/kubernetes/pvc.yaml"
+                    //sh "kubectl delete deploy pokeapi-kube -n default"
+                    sh "kubectl apply -f deploy/kubernetes/deploy.yaml" 
+                    sh "kubectl apply -f deploy/kubernetes/serviceNP.yaml"
+                }
+            }
+        }
+     //Fin de STAGES
+    }
+
+
+ //Fin de PIPELINE
+}
+// Funciona

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-env-config
+data:
+  CONTEXTO: /home/CaronteWeb
+  AUTOR: fabiofabrega
+  TZ: Europe/Madrid
+  PROYECTO: api
+  GITHUB: https://github.com/FabioFabrega/Api.git
+  USUARIO: fabio
+  PASSWD: fabio
+  HOSTNAME: react
+  PORT_SSH: "45678"
+  PORT_ORIGEN: "8083"

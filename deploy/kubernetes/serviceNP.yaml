@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pokeapi-kube-s # Nombre del servicio
+  namespace: default
+  labels:
+    app: pokeapi-kube
+spec:
+  selector:
+    app: pokeapi-kube
+  type: NodePort  # Cambiado a un tipo válido de servicio
+  ports:
+  - name: http-port
+    protocol: TCP
+    port: 80  # Puerto expuesto en el servicio
+    targetPort: 80  # Puerto expuesto en el contenedor
+    nodePort: 30580  # Para acceder desde el exterior (en el rango 30000-32767)
